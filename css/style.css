@@ -1,0 +1,307 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navbar {
+  padding: 0 10%;
+  background-color: whitesmoke;
+  width: 100%;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@-webkit-keyframes logo_animation_1 {
+  to {
+    -webkit-transform: translate(-22px, 12px);
+            transform: translate(-22px, 12px);
+  }
+  from {
+    -webkit-transform: translate(-22px, 18px);
+            transform: translate(-22px, 18px);
+  }
+}
+
+@keyframes logo_animation_1 {
+  to {
+    -webkit-transform: translate(-22px, 12px);
+            transform: translate(-22px, 12px);
+  }
+  from {
+    -webkit-transform: translate(-22px, 18px);
+            transform: translate(-22px, 18px);
+  }
+}
+
+@-webkit-keyframes logo_animation_2 {
+  to {
+    -webkit-transform: translate(-28px, -8px);
+            transform: translate(-28px, -8px);
+  }
+  from {
+    -webkit-transform: translate(-28px, -7px);
+            transform: translate(-28px, -7px);
+  }
+}
+
+@keyframes logo_animation_2 {
+  to {
+    -webkit-transform: translate(-28px, -8px);
+            transform: translate(-28px, -8px);
+  }
+  from {
+    -webkit-transform: translate(-28px, -7px);
+            transform: translate(-28px, -7px);
+  }
+}
+
+.navbar .logo {
+  font-size: 1.5em;
+  font-weight: 700;
+  padding-left: 28px;
+}
+
+.navbar .logo:hover {
+  cursor: pointer;
+}
+
+.navbar .logo::before {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: black;
+  border-radius: 50%;
+  -webkit-transform: translate(-22px, 12px);
+          transform: translate(-22px, 12px);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.navbar .logo::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 4px;
+  background-color: black;
+  -webkit-transform: translate(-28px, -8px);
+          transform: translate(-28px, -8px);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.navbar .logo:hover::before {
+  -webkit-animation: logo_animation_1 .3s infinite alternate ease;
+          animation: logo_animation_1 .3s infinite alternate ease;
+}
+
+.navbar .logo:hover::after {
+  -webkit-animation: logo_animation_2 .3s .2s infinite alternate ease;
+          animation: logo_animation_2 .3s .2s infinite alternate ease;
+}
+
+.navbar .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30%;
+}
+
+.navbar .links .link {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.navbar .links .link a {
+  color: black;
+}
+
+.navbar .links .link .link_img {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.navbar .links .link .link_img i {
+  font-size: 1.5em;
+}
+
+.navbar .links .link .link_btn {
+  padding: 6px 16px;
+  margin-left: 10px;
+  background-color: transparent;
+  color: black;
+  border: 2.4px solid black;
+  border-radius: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.navbar .links .link .link_btn:hover {
+  background-color: black;
+  color: whitesmoke;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.navbar .links .link .link_btn:focus {
+  outline: none;
+}
+
+.navbar .links .link:hover .link_img {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.navbar .links .link:nth-child(3) {
+  margin-right: 0;
+}
+
+.container {
+  padding: 4% 10%;
+  width: 100%;
+}
+
+.hero {
+  background: #7b4397;
+  background: -webkit-gradient(linear, left top, right top, from(#7b4397), to(#dc2430));
+  background: linear-gradient(to right, #7b4397, #dc2430);
+}
+
+.hero .hero_heading {
+  font-size: 2em;
+  font-weight: 700;
+  color: whitesmoke;
+  margin-bottom: 12px;
+}
+
+.hero .hero_text {
+  font-size: 1em;
+  font-weight: 400;
+  color: whitesmoke;
+  opacity: 0.8;
+}
+
+.converter {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10%;
+  position: relative;
+}
+
+.converter .label_text {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.converter textarea {
+  padding: 16px 24px;
+  height: 220px;
+  margin-bottom: 32px;
+  resize: vertical;
+  border-radius: 12px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.converter textarea:focus {
+  outline: none;
+  border: 1.2px solid black;
+}
+
+.converter .convert_btn {
+  padding: 6px 16px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  background-color: transparent;
+  color: black;
+  border: 2.4px solid black;
+  border-radius: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.converter .convert_btn:hover {
+  background-color: black;
+  color: whitesmoke;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.converter .convert_btn:focus {
+  outline: none;
+}
+
+.converter .input_container,
+.converter .output_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.footer {
+  padding: 2% 10%;
+  background: #7b4397;
+  background: -webkit-gradient(linear, right top, left top, from(#7b4397), to(#dc2430));
+  background: linear-gradient(to left, #7b4397, #dc2430);
+  color: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.footer .copyright-text, .footer .love-text {
+  opacity: 0.8;
+}
+
+.footer .love-text span {
+  color: greenyellow;
+  font-size: 1.4em;
+}
+/*# sourceMappingURL=style.css.map */

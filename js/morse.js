@@ -50,23 +50,17 @@ const decodeMorse = (morse_code) => {
 
 
 
+const inputArea = document.querySelector('textarea[name="text_input"]');
+const outputArea = document.querySelector('textarea[name="morse_output"]');
+const submitBtn = document.querySelector('.convert_btn');
 
+submitBtn.addEventListener('click', () => {
+    const inputText = inputArea.value.toUpperCase();
 
-
-
-
-
-
-
-
-
-
-// ------------------------------------------------------------------------------------------------------------------------------------------------
-//  TESTING
-// ------------------------------------------------------------------------------------------------------------------------------------------------
-
-// window.m = morseToEng;
-// window.addEventListener('load', () => {
-//     console.log(encodeMorse('HEY JUDE'));
-//     console.log(decodeMorse('.... . -.--   .--- ..- -.. .'));
-// });
+    if(inputText){
+        outputArea.textContent = encodeMorse(inputText.trim());
+    }
+    else{
+        outputArea.textContent = '';
+    }
+});

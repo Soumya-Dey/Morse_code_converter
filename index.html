@@ -1,11 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-    <script src="./morse.js"></script>
+    <nav class="navbar">
+        <div class="logo">dashDot</div>
+
+        <ul class="links">
+            <li class="link github_link">
+                <a href="https://github.com/Soumya-Dey/Morse_code_converter" target="_blank">
+                    <div class="link_img"><i class="fab fa-github"></i></div>
+                </a>
+            </li>
+            <li class="link facebook_link">
+                <a href="https://www.facebook.com/soumya.dey.39948" target="_blank">
+                    <div class="link_img"><i class="fab fa-facebook"></i></div>
+                </a>
+            </li>
+            <!-- <li class="link instagram_link">
+                <a href="https://www.instagram.com/soumya_sl/" target="_blank">
+                    <div class="link_img"><i class="fab fa-instagram"></i></div>
+                </a>
+            </li> -->
+            <li class="link know_more_link">
+                <a href="https://morse.withgoogle.com/learn/" target="_blank" class="morse_link">
+                    <button class="link_btn">Learn Morse Code</button>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container hero">
+        <h1 class="hero_heading">Morse code converter</h1>
+        <p class="hero_text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident architecto eius
+            dignissimos.</p>
+    </div>
+
+    <div class="container converter">
+        <div class="input_container">
+            <label for="text_input" class="input_label label_text">Text</label>
+            <textarea type="text" id="text_input" name="text_input" placeholder="Enter some text..."></textarea>
+            <button type="submit" class="convert_btn">Convert to Morse</button>
+        </div>
+
+        <div class="output_container">
+            <label for="morse_output" class="output_label label_text">Morse code</label>
+            <textarea type="text" id="morse_output" name="morse_output" placeholder="Morse code here..."
+                readonly></textarea>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p class="copyright-text">
+            &copy;2020 dashDot | All rights reserved
+        </p>
+        <p class="love-text">
+            This website is made with <span>&hearts;</span> by Soumya
+        </p>
+    </div>
+
+    <script src="./js/morse.js"></script>
 </body>
+
 </html>
